@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "your-server-name": {
+      "command": "php",
+      "args": ["/absolute/path/to/your/bin/your-mcp-server"]
+    }
+  }
+}

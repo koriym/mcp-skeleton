@@ -1,0 +1,40 @@
+{
+    "name": "mcp/skeleton",
+    "description": "A skeleton template for creating Model Context Protocol (MCP) servers in PHP",
+    "type": "project",
+    "license": "MIT",
+    "keywords": ["mcp", "model-context-protocol", "server", "template", "skeleton"],
+    "require": {
+        "php": "^8.3",
+        "symfony/polyfill-php83": "^1.33"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "vimeo/psalm": "^6.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "McpSkeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "McpSkeleton\\Examples\\": "examples/",
+            "McpSkeleton\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/mcp-skeleton"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "psalm": "psalm",
+        "tests": [
+            "@test",
+            "@psalm"
+        ]
+    }
+}
