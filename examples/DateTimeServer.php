@@ -76,7 +76,8 @@ class DateTimeServer extends SkeletonMcpServer
 
             case 'days_remaining':
                 $today = new \DateTime();
-                $endOfYear = new \DateTime('December 31');
+                $year = $today->format('Y');
+                $endOfYear = new \DateTime("{$year}-12-31");
                 $diff = $today->diff($endOfYear);
                 return "Days remaining in {$today->format('Y')}: {$diff->days} days";
 
