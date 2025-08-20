@@ -28,12 +28,16 @@ The Model Context Protocol (MCP) is an open protocol that enables AI assistants 
 
 ## Quick Start
 
-### 1. Copy the skeleton
+### 1. Create from template
+
+Click **"Use this template"** on GitHub to create a new repository, or:
 
 ```bash
-# Copy this directory to your new project
-cp -r mcp-skeleton my-mcp-server
+# Clone without history
+git clone --depth 1 https://github.com/koriym/mcp-skeleton my-mcp-server
 cd my-mcp-server
+rm -rf .git
+git init
 ```
 
 ### 2. Install dependencies
@@ -59,7 +63,7 @@ composer install
    - Point to your server class
 
 4. **Create your README**:
-   - Copy `TEMPLATE_README.md` to `README.md`
+   - Copy `TEMPLATE_README.md` to `README.md`  
    - Customize with your server's details
 
 ### 4. Example Implementation
