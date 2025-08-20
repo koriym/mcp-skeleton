@@ -72,7 +72,8 @@ abstract class SkeletonMcpServer
 
     public function __construct()
     {
-        $this->debugMode = (bool)(getenv('MCP_DEBUG') ?: false);
+        $envDebug = getenv('MCP_DEBUG');
+        $this->debugMode = in_array(strtolower((string)$envDebug), ['1', 'true'], true);
         $this->initializeTools();
     }
 
